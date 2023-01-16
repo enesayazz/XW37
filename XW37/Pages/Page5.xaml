@@ -12,6 +12,7 @@
                         <StackLayout Orientation="Horizontal" Spacing="5">
                             <Label Text="{Binding C_ID}" TextColor="Black"/>
                             <Label Text="{Binding P_ID}" TextColor="Black"/>
+                            <Button Text="Delete" WidthRequest="150" x:Name="Button_Delete" BindingContext="{Binding A_ID}" Clicked="Button_Delete_Clicked"/>
 
                         </StackLayout>
                     </ViewCell>
