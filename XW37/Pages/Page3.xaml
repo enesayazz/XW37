@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XW37.Page3"
+             Title="Page3">
+    <ScrollView BackgroundColor="White">
+        <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Label Text="Name" TextColor="Black"/>
+                <Entry BackgroundColor="Black" x:Name="Parent_Name_Entry"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Label Text="Last Name" TextColor="Black"/>
+                <Entry BackgroundColor="Black" x:Name="Parent_Last_Name_Entry"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Label Text="Tel.No." TextColor="Black"/>
+                <Entry BackgroundColor="Black" x:Name="Parent_Tel_Entry"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <RadioButton Content="Mother" TextColor="Black"/>
+                <RadioButton Content="Father" TextColor="Black"/>
+            </HorizontalStackLayout>
+
+            <VerticalStackLayout BackgroundColor="Green" HeightRequest="50" WidthRequest="8000">
+                <Button Text="Add" VerticalOptions="Center" WidthRequest="150" TextColor="Black" TranslationY="5" x:Name="Button_Add" Clicked="Button_Add_Clicked"/>
+            </VerticalStackLayout>
+            <ListView x:Name="Parent_List_Wiev">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Spacing="5">
+                                <Label Text="{Binding P_ID}" TextColor="Black"/>
+                                <Label Text="{Binding P_Name}" TextColor="Black"/>
+                                <Label Text="{Binding P_L_Name}" TextColor="Black"/>
+                                <Label Text="{Binding P_Tel}" TextColor="Black"/>
+                                <Button Text="Delete" WidthRequest="150" x:Name="Button_Delete" BindingContext="{Binding P_ID}" Clicked="Button_Delete_Clicked_1"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+            <VerticalStackLayout BackgroundColor="Green" HeightRequest="50" WidthRequest="8000">
+                <Button Text="Delete" VerticalOptions="Center" WidthRequest="150" TextColor="Black" TranslationY="5" x:Name="Button_Delete" Clicked="Button_Delete_Clicked"/>
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+</ContentPage>

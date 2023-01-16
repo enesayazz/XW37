@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="XW37.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:XW37"
+    Shell.FlyoutBehavior="Disabled">
+
+    <TabBar>
+        <Tab Title="Home" Icon="home.png">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage"/>
+        </Tab>
+        <Tab Title="Child" Icon="child.png">
+            <ShellContent ContentTemplate="{DataTemplate local:Page2}" Route="Page2"/>
+        </Tab>
+        <Tab Title="Parent" Icon="parent.png">
+            <ShellContent ContentTemplate="{DataTemplate local:Page3}" Route="Page3"/>
+        </Tab>
+        <Tab Title="Assign" Icon="assign.png">
+            <ShellContent ContentTemplate="{DataTemplate local:Page4}" Route="Page4"/>
+        </Tab>
+        <Tab Title="Report" Icon="report.png">
+            <ShellContent ContentTemplate="{DataTemplate local:Page5}" Route="Page5"/>
+        </Tab>
+    </TabBar>
+
+</Shell>

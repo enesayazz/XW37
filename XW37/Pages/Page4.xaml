@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XW37.Page4"
+             Title="Page4">
+    <ScrollView BackgroundColor="White">
+    <VerticalStackLayout>
+            <Label Text="Children List" FontSize="Medium" TextColor="Black"/>
+            <ListView x:Name="Children_List_Wiev" ItemTapped="Children_List_Wiev_ItemTapped" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Spacing="5">
+                            <Label Text="{Binding C_ID}" TextColor="Black"/>
+                            <Label Text="{Binding C_Name}" TextColor="Black"/>
+                            <Label Text="{Binding C_L_Name}" TextColor="Black"/>
+
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            
+        </ListView>
+            <Label Text="Parent's List" FontSize="Medium" TextColor="Black"/>
+            <ListView x:Name="Parent_List_Wiev" ItemTapped="Parent_List_Wiev_ItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Spacing="5">
+                            <Label Text="{Binding P_ID}" TextColor="Black"/>
+                            <Label Text="{Binding P_Name}" TextColor="Black"/>
+                            <Label Text="{Binding P_L_Name}" TextColor="Black"/>
+                            <Label Text="{Binding P_Tel}" TextColor="Black"/>
+
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            
+        </ListView>
+        <VerticalStackLayout BackgroundColor="Blue" VerticalOptions="End" HeightRequest="50" HorizontalOptions="FillAndExpand">
+            <Button Text="Add" TextColor="Black" WidthRequest="150" TranslationY="5" x:Name="Button_Add" Clicked="Button_Add_Clicked"/>
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
