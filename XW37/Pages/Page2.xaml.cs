@@ -2,6 +2,7 @@ namespace XW37;
 
 public partial class Page2 : ContentPage
 {
+    string gender;
 	public Page2()
 	{
 		InitializeComponent();
@@ -14,6 +15,7 @@ public partial class Page2 : ContentPage
 		{
 			C_Name = Child_Name_Entry.Text,
 			C_L_Name = Child_Last_Name_Entry.Text,
+            C_Gender = gender,
 		});
         Children_List_Wiev.ItemsSource = App.DBTrans.GetChildren();
     }
@@ -30,5 +32,15 @@ public partial class Page2 : ContentPage
         App.DBTrans.DeleteChild((int)button.BindingContext);
         Children_List_Wiev.ItemsSource = App.DBTrans.GetChildren();
 
+    }
+
+    private void Child_Male_CheckedChanged(object sender, CheckedChangedEventArgs e)
+    {
+        gender = "Male";
+    }
+
+    private void Child_Female_CheckedChanged(object sender, CheckedChangedEventArgs e)
+    {
+        gender = "Female";
     }
 }

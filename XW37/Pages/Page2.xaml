@@ -14,8 +14,8 @@
                 <Entry BackgroundColor="Black" x:Name="Child_Last_Name_Entry"/>
         </HorizontalStackLayout>
         <HorizontalStackLayout HorizontalOptions="Center">
-                <RadioButton Content="Male" TextColor="Black" x:Name="Child_Male"/>
-                <RadioButton Content="Female" TextColor="Black" x:Name="Child_Female"/>
+                <RadioButton Content="Male" TextColor="Black" x:Name="Child_Male" CheckedChanged="Child_Male_CheckedChanged"/>
+                <RadioButton Content="Female" TextColor="Black" x:Name="Child_Female" CheckedChanged="Child_Female_CheckedChanged"/>
         </HorizontalStackLayout>
             <HorizontalStackLayout HorizontalOptions="Center">
                 <Image Source="ball.png" WidthRequest="40" HeightRequest="40"/>
@@ -38,6 +38,7 @@
                                 <Label Text="{Binding C_ID}" TextColor="Black"/>
                                 <Label Text="{Binding C_Name}" TextColor="Black"/>
                                 <Label Text="{Binding C_L_Name}" TextColor="Black"/>
+                                <Label Text="{Binding C_Gender}" TextColor="Black"/>
                                 <Button Text="Delete" WidthRequest="150" x:Name="Button_Delete" BindingContext="{Binding C_ID}" Clicked="Button_Delete_Clicked_1"/>
                             </StackLayout>
                         </ViewCell>

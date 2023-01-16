@@ -18,8 +18,8 @@
                 <Entry BackgroundColor="Black" x:Name="Parent_Tel_Entry"/>
             </HorizontalStackLayout>
             <HorizontalStackLayout HorizontalOptions="Center">
-                <RadioButton Content="Mother" TextColor="Black"/>
-                <RadioButton Content="Father" TextColor="Black"/>
+                <RadioButton Content="Mother" TextColor="Black" CheckedChanged="RadioButton_CheckedChanged"/>
+                <RadioButton Content="Father" TextColor="Black" CheckedChanged="RadioButton_CheckedChanged_1"/>
             </HorizontalStackLayout>
 
             <VerticalStackLayout BackgroundColor="Green" HeightRequest="50" WidthRequest="8000">
@@ -34,6 +34,7 @@
                                 <Label Text="{Binding P_Name}" TextColor="Black"/>
                                 <Label Text="{Binding P_L_Name}" TextColor="Black"/>
                                 <Label Text="{Binding P_Tel}" TextColor="Black"/>
+                                <Label Text="{Binding P_Mother_Father}" TextColor="Black"/>
                                 <Button Text="Delete" WidthRequest="150" x:Name="Button_Delete" BindingContext="{Binding P_ID}" Clicked="Button_Delete_Clicked_1"/>
                             </StackLayout>
                         </ViewCell>

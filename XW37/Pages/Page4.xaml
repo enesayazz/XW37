@@ -14,8 +14,9 @@
                             <Label Text="{Binding C_ID}" TextColor="Black"/>
                             <Label Text="{Binding C_Name}" TextColor="Black"/>
                             <Label Text="{Binding C_L_Name}" TextColor="Black"/>
+                                <Label Text="{Binding C_Gender}" TextColor="Black"/>
 
-                        </StackLayout>
+                            </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
